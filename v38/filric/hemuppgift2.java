@@ -47,7 +47,7 @@ public class hemuppgift2 {
 		
 		
 		
-		int medelvarde = (z + x + c + v + b) / 5;
+		double medelvarde = (z + x + c + v + b) / 5;
 		
 		System.out.println("Högst: " + biggest);
 		System.out.println("Lägst: " + smallest);
