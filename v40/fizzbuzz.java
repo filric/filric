@@ -13,8 +13,8 @@ public class fizzbuzz {
 		int n = input.nextInt();
 		
 		for(int i = 1; i <= n; i++) {
-			if(i % x) {
-				if(i % y) {
+			if(i % x == 0) {
+				if(i % y == 0) {
 					System.out.println("FizzBuzz");
 				}
 				else{
@@ -22,7 +22,7 @@ public class fizzbuzz {
 				}
 			}
 			
-			if else(i % y) {
+			if(i % y == 0) {
 				System.out.println("Buzz");
 			}
 			else {
