@@ -6,22 +6,18 @@ public class hemuppgift {
 
 	public static void main(String[] args) {
 		
-		lol();
-		max();
-		count();
-		kelvinToCelsius();
-		fahrenheitToCelsius();
-		ageControl();
-		stair();
+	/*	lol();
+		System.out.println(max(7, 30));
+		count(50);
+		kelvinToCelsius(5);
+		fahrenheitToCelsius(98);
+		ageControl(17); */
+		stair(6);
 		}
  public static void lol() {
 	 System.out.println("AHAHAHAHHA");
  }
  public static int max(int a, int b) {
-	 
-	 Scanner input = new Scanner(System.in);
-	 a = input.nextInt();
-	 b = input.nextInt();
 	 
 	 if(a == b || a > b)
 		 
@@ -33,11 +29,6 @@ public class hemuppgift {
  }
  public static void count(int n) {
 	 
-	 Scanner input = new Scanner(System.in);
-	 
-	 System.out.println("Skriv in ett heltal");
-	 n = input.nextInt();
-	 
 	 int i = 1;
 	 
 	 while(i <= n) {
@@ -48,9 +39,6 @@ public class hemuppgift {
  }
  public static double kelvinToCelsius(double kelvin) {
 	 
-	 Scanner input = new Scanner(System.in);
-	 System.out.println("Skriv in en temperatur i Kelvin");
-	 kelvin = input.nextDouble();
 	 double celsius;
 	 
 	 if(kelvin > 0) {
@@ -65,9 +53,6 @@ public class hemuppgift {
  }
 public static double fahrenheitToCelsius(double fahrenheit) {
 	 
-	 Scanner input = new Scanner(System.in);
-	 System.out.println("Skriv in en temperatur i Fahrenheit");
-	 fahrenheit = input.nextDouble();
 	 double celsius;
 	 
 	 celsius = (fahrenheit - 32)*5/9;
@@ -75,11 +60,6 @@ public static double fahrenheitToCelsius(double fahrenheit) {
 		 
  }
 public static void ageControl(int age) {
-	 
-	 Scanner input = new Scanner(System.in);
-	 
-	 System.out.println("Hur gammal är du?");
-	 age = input.nextInt();
 	 
 	 if(age < 6) {
 		 System.out.println("Småbarn får inte göra något");
@@ -108,11 +88,6 @@ public static void ageControl(int age) {
 }
 public static void stair(int steps) {
 	
-	Scanner input = new Scanner(System.in);
-	 
-	 System.out.println("Antal steg?");
-	 steps = input.nextInt();
-	 
 	 int i = 1;
 	 String str = "x";
 	 
@@ -120,6 +95,7 @@ public static void stair(int steps) {
 		 
 		 System.out.println(str);
 		 str = str + "x"; 
+		 i++;
 	 } 
 }
 }
