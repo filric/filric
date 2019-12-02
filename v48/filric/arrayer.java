@@ -39,6 +39,9 @@ public class arrayer {
 			}
 		}
 		return "Antal sjuor är " + antal7;
+		/**
+		 * detta är en metod som räknar hur många sjuor de finns i numbers arrayen
+		 */
 	}
 
 	public static String countTom(String[] namn) {
@@ -50,6 +53,9 @@ public class arrayer {
 			}
 		}
 		return "Antal Tom är " + antalTom;
+		/**
+		 * detta är en metod som räknar hur många gånger "Tom" det finns i names arrayen
+		 */
 	}
 
 	public static int mestTal(int[] tal) {
@@ -70,6 +76,9 @@ public class arrayer {
 			}
 		}
 		return mest;
+		/**
+		 * detta är en metod som tar reda på vilket nummer det finns flest av i arrayen numbers
+		 */
 	}
 	public static int minstTal(int[] tal) {
 		int minst = 0;
@@ -89,6 +98,9 @@ public class arrayer {
 			}
 		}
 		return minst;
+		/**
+		 * detta är en metod som tar reda på vilket nummer det finns minst av i arrayen numbers
+		 */
 	}
 
 	public static String hittaNamn(String[] namn) {
@@ -100,6 +112,9 @@ public class arrayer {
 			}
 		}
 		return "Indexet är " + index;
+		/**
+		 * detta är en metod som tar reda på vilket index namnet Drusilla finns på i arrayen names
+		 */
 	}
 
 	public static String summeraEven(int[] tal) {
@@ -112,6 +127,9 @@ public class arrayer {
 			}
 		}
 		return "Summan är " + summa;
+		/**
+		 * en metod som skriver ut summan av alla jämna tal i arrayen numbers
+		 */
 	}
 
 	public static String countAll(int[] tal) {
