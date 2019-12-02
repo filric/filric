@@ -21,6 +21,8 @@ public class arrayer {
 
 		System.out.println(countSevens(numbers));
 		System.out.println(countTom(names));
+		System.out.println(mestTal(numbers));
+		System.out.println(minstTal(numbers));
 		System.out.println(hittaNamn(names));
 		System.out.println(summeraEven(numbers));
 		System.out.println(countAll(numbers));
@@ -48,6 +50,45 @@ public class arrayer {
 			}
 		}
 		return "Antal Tom är " + antalTom;
+	}
+
+	public static int mestTal(int[] tal) {
+		int mest = 0;
+		int max = 0;
+
+		for (int i = 0; i < 10; i++) {
+			int antal = 0;
+			for (int j = 0; j < tal.length; j++) {
+				if (tal[j] == i) {
+					antal++;
+				}
+			}
+
+			if (antal > max) {
+				mest = i;
+				max = antal;
+			}
+		}
+		return mest;
+	}
+	public static int minstTal(int[] tal) {
+		int minst = 0;
+		int minimum = 99;
+
+		for (int i = 0; i < 10; i++) {
+			int antal = 0;
+			for (int j = 0; j < tal.length; j++) {
+				if (tal[j] == i) {
+					antal++;
+				}
+			}
+
+			if (antal < minimum) {
+				minst = i;
+				minimum = antal;
+			}
+		}
+		return minst;
 	}
 
 	public static String hittaNamn(String[] namn) {
@@ -137,6 +178,7 @@ public class arrayer {
 		}
 		return "Antal L är " + antal;
 	}
+
 	public static String hitta5bok(String[] namn) {
 
 		int antal = 0;
@@ -147,7 +189,5 @@ public class arrayer {
 		}
 		return "Antal namn med 5 bokstäver är " + antal;
 	}
-	
-	
 
 }
