@@ -30,6 +30,12 @@ public class arrayer {
 
 	}
 
+	/**
+	 * detta är en metod som räknar hur många sjuor de finns i numbers arrayen
+	 * 
+	 * @param tal några random tal
+	 * @return antal 7or
+	 */
 	public static String countSevens(int[] tal) {
 
 		int antal7 = 0;
@@ -39,11 +45,14 @@ public class arrayer {
 			}
 		}
 		return "Antal sjuor är " + antal7;
-		/**
-		 * detta är en metod som räknar hur många sjuor de finns i numbers arrayen
-		 */
 	}
 
+	/**
+	 * detta är en metod som räknar hur många gånger "Tom" det finns i names arrayen
+	 * 
+	 * @param namn namnlista
+	 * @return Antal gånger tom nämns
+	 */
 	public static String countTom(String[] namn) {
 
 		int antalTom = 0;
@@ -53,11 +62,15 @@ public class arrayer {
 			}
 		}
 		return "Antal Tom är " + antalTom;
-		/**
-		 * detta är en metod som räknar hur många gånger "Tom" det finns i names arrayen
-		 */
 	}
 
+	/**
+	 * detta är en metod som tar reda på vilket nummer det finns flest av i arrayen
+	 * numbers
+	 * 
+	 * @param tal några random tal
+	 * @return de talet de finns flest av
+	 */
 	public static int mestTal(int[] tal) {
 		int mest = 0;
 		int max = 0;
@@ -76,10 +89,15 @@ public class arrayer {
 			}
 		}
 		return mest;
-		/**
-		 * detta är en metod som tar reda på vilket nummer det finns flest av i arrayen numbers
-		 */
 	}
+
+	/**
+	 * detta är en metod som tar reda på vilket nummer det finns minst av i arrayen
+	 * numbers
+	 * 
+	 * @param tal random tal
+	 * @return de talet de finns minst av
+	 */
 	public static int minstTal(int[] tal) {
 		int minst = 0;
 		int minimum = 99;
@@ -98,11 +116,15 @@ public class arrayer {
 			}
 		}
 		return minst;
-		/**
-		 * detta är en metod som tar reda på vilket nummer det finns minst av i arrayen numbers
-		 */
 	}
 
+	/**
+	 * detta är en metod som tar reda på vilket index namnet Drusilla finns på i
+	 * arrayen names
+	 * 
+	 * @param namn namnlista
+	 * @return vilket index Drusilla har
+	 */
 	public static String hittaNamn(String[] namn) {
 
 		int index = -1;
@@ -112,11 +134,15 @@ public class arrayer {
 			}
 		}
 		return "Indexet är " + index;
-		/**
-		 * detta är en metod som tar reda på vilket index namnet Drusilla finns på i arrayen names
-		 */
+
 	}
 
+	/**
+	 * en metod som skriver ut summan av alla jämna tal i arrayen numbers
+	 * 
+	 * @param tal random tal
+	 * @returnsumman av alla jämna tal
+	 */
 	public static String summeraEven(int[] tal) {
 
 		int summa = 0;
@@ -127,11 +153,16 @@ public class arrayer {
 			}
 		}
 		return "Summan är " + summa;
-		/**
-		 * en metod som skriver ut summan av alla jämna tal i arrayen numbers
-		 */
 	}
 
+	/**
+	 * detta är metod som jag personligen tycker är cancer och vill inte ha den på
+	 * detta sättet de är en metod som räknar hur många av varje siffra det finns i
+	 * arrayen numbers
+	 * 
+	 * @param tal
+	 * @return
+	 */
 	public static String countAll(int[] tal) {
 
 		int antal0 = 0;
@@ -178,6 +209,7 @@ public class arrayer {
 				antal9++;
 
 			}
+
 		}
 
 		return "Antal 0:or är " + antal0 + ". Antal 1:or är " + antal1 + ". Antal 2:or är " + antal2
@@ -186,6 +218,12 @@ public class arrayer {
 				+ ". Antal 9:or är " + antal9 + ".";
 	}
 
+	/**
+	 * en metod som kollar hur många namn som börjar på bokstaven L i arrayen names
+	 * 
+	 * @param namn namnlista
+	 * @return antal namn som börjar på L
+	 */
 	public static String hittaL(String[] namn) {
 
 		int antal = 0;
@@ -197,6 +235,13 @@ public class arrayer {
 		return "Antal L är " + antal;
 	}
 
+	/**
+	 * en metod som kollar hur många namn som har 5 bokstäver i arrayen names i sig
+	 * och skriver ut de
+	 * 
+	 * @param namn namnlista
+	 * @return
+	 */
 	public static String hitta5bok(String[] namn) {
 
 		int antal = 0;
