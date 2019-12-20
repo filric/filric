@@ -4,10 +4,15 @@ import java.util.Scanner;
 
 public class uppgift7 {
 
+	/**
+	 * hjälper dig att hitta ny musik baserat på vilken genre du väljer
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Switch - case är användbart när man har ett bestämt antal fall som kan hända,
-		// t ex en meny för användare
+		// t ex en meny för användare enligt min lärare Tomas
 
 		Scanner input = new Scanner(System.in);
 
@@ -15,15 +20,17 @@ public class uppgift7 {
 		String genre;
 
 		int choice = 0;
-
+		
 		do {
-			System.out.println("Welcome to movie inspiration database! Please choose a genre!");
-			System.out.println("(1) - Thriller");
-			System.out.println("(2) - Comedy");
-			System.out.println("(3) - Romance");
-			System.out.println("(4) - Fantasy");
+			System.out.println("Hej och välkommen. Förstår att du är trött på att lyssna på samma musik hela tiden så nu ska detta programmet hjälpa dig hitta ny musik! De ända du behöver göra är att välja en genre!");
+			System.out.println("(1) - Tik Tok");
+			System.out.println("(2) - Throwback");
+			System.out.println("(3) - Punk");
+			System.out.println("(4) - Suicidal");
 			System.out.println("(5) - Quit");
 			System.out.println();
+			System.out.print("Skriv ditt val: ");
+			
 
 			choice = input.nextInt();
 			
@@ -32,16 +39,14 @@ public class uppgift7 {
 			while (!success) { // loopar arrayen tills att användaren skrivit in en int
 
 				try {
-					System.out.print("Write your choices: ");
+					
 					choice = input.nextInt();
 					System.out.println();
 					success = true; // om rätt datatyp som input avslutas while-loopen
 
 				} catch (Exception e) { // fixar felaktig input
 					input.next(); // behövs för att göra sig av med felaktig input ovan
-					System.out.println("Index must be an integer you idiot"); // eget
-					// felmeddelande till användare
-					//System.out.println(e); // debugging för programmeraren
+					System.out.println("Indexet måste vara ett heltal din idiot"); // eget felmeddelande till användare
 				}
 
 			}
@@ -50,47 +55,47 @@ public class uppgift7 {
 
 			switch (choice) {
 			case 1:
-				genre = "Thriller";
-				System.out.println("You chose " + genre + "! Here are three good movies!");
+				genre = "Tik Tok";
+				System.out.println("Du valde " + genre + "! Här är lite roliga låtar!");
 				System.out.println();
-				System.out.println("1. A quit place, av John Krasinski");
-				System.out.println("2. The dark night, av Christopher Nolan");
-				System.out.println("3. The silence of the lamb, av Jonathan Demme");
+				System.out.println("1. I'm Gonna Show You Crazy, av Bebe Rexha");
+				System.out.println("2. Ride It, av Regard");
+				System.out.println("3. Birthday Suit, av Cosmo Sheldrake");
 				System.out.println();
 				break;
 			case 2:
-				genre = "Comedy";
-				System.out.println("You chose " + genre + "! Here are three good movies!");
+				genre = "Throwback";
+				System.out.println("Du valde " + genre + "! Här är lite roliga låtar!");
 				System.out.println();
-				System.out.println("1. Deadpool 2, av David Leitch");
-				System.out.println("2. Dum och dummare, av Peter Farelly");
-				System.out.println("3. Bridesmaid, av Paul Feig");
+				System.out.println("1. Take on Me, av a-ha");
+				System.out.println("2. What Is Love, av Haddaway");
+				System.out.println("3. Fighting Trousers, av Professor Elemental");
 				System.out.println();
 				break;
 			case 3:
-				genre = "Romance";
-				System.out.println("You chose " + genre + "! Here are three good movies!");
+				genre = "Punk";
+				System.out.println("Du valde " + genre + "! Här är lite roliga låtar!");
 				System.out.println();
-				System.out.println("1. The notebook, av Nick Cassavetes");
-				System.out.println("2. The holidays, av Nancy Meyrs");
-				System.out.println("3. Love Simon, av Greg Berlanti");
+				System.out.println("1. Bodies In The Basement, av Demented Are Go");
+				System.out.println("2. Staden Göteborg, av Troublemakers");
+				System.out.println("3. Turncoat, av Anti-Flag");
 				System.out.println();
 				break;
 			case 4:
-				genre = "Fantasy";
-				System.out.println("You chose " + genre + "! Here are three good movies!");
+				genre = "Suicidal";
+				System.out.println("Du valde " + genre + "! Här är lite roliga låtar!");
 				System.out.println();
-				System.out.println("1. Lord of the rings - Sagan om ringen, av Peter Jackson");
-				System.out.println("2. Aquaman, av James Wan");
-				System.out.println("3. Avengers - Infinity war, av Anthony & Joe Russo");
+				System.out.println("1. Suicidal Thoughts, av Josh A och lamjakehill");
+				System.out.println("2. Keep Myself Alive, av Get Scared");
+				System.out.println("3. Broken, av Lund");
 				System.out.println();
 				break;
 			case 5:
-				System.out.println("Thank you for today!");
+				System.out.println("Tack för idag!");
 				break;
 			default:
-				genre = "invalid";
-				System.out.println("You have made a " + genre + " choice! Too bad for you!");
+				genre = "ogiltigt";
+				System.out.println("Du har valt ett " + genre + " val! Synd.");
 				System.out.println();
 				break;
 			}
