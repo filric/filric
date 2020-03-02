@@ -24,7 +24,7 @@ public class Talspelet {
 			if (easyHard == 2) {
 				random = (int) (Math.random() * (1000 - 1) + 1);// genererar ett random heltal mellan 1 och 1000
 			}
-			for (int chanser = 10; chanser > 0; chanser--) {// en loop som kommer köras max 10 gånger, om du inte gissar rätt
+			for (int chanser = 10; chanser > 0; chanser--) {// en loop som kommer köras max 10 gånger, om du inte gissar rätt. Gissningarna minskar med 1 varje gång den körs
 				System.out.println("Gissa på ett tal! Du har " + chanser + " chanser kvar!");
 				int gissning = input.nextInt();
 
@@ -42,6 +42,7 @@ public class Talspelet {
 			quitQuestion = input.nextInt();
 		} while (quitQuestion != 0);
 
+		input.close();
 	}
 
 }
