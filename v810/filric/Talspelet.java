@@ -8,7 +8,7 @@ public class Talspelet {
 
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("Välkommen till talspelet");
+		System.out.println("Välkommen till talspelet Tomas :D");
 		int quitQuestion;
 
 		do { // loop som bara avslutas om man skriver att quitQuestion är lika med 0
