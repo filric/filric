@@ -42,6 +42,7 @@ public class Talspelet {
 			quitQuestion = input.nextInt();
 		} while (quitQuestion != 0);
 
+		System.out.println("Tack för att du spelade!");
 		input.close();
 	}
 
