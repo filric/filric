@@ -11,6 +11,8 @@
 	<classpathentry kind="src" path="v50"/>
 	<classpathentry kind="src" path="v.3"/>
 	<classpathentry kind="src" path="v810"/>
+	<classpathentry kind="src" path="v12"/>
+	<classpathentry kind="src" path="v14"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="V37"/>
 	<classpathentry kind="output" path="bin"/>
