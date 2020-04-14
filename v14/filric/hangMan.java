@@ -26,6 +26,19 @@ public class hangMan {
 		easy[2] = "Sarv";//En fisk
 		easy[3] = "Autism"; 
 		easy[4] = "Id";//Också en fisk
+		
+		for (int chanser = 10; chanser > 0; chanser--) {//en loop som tar bort en chans varje gång du svarar fel 
+			System.out.println("Gissa på en bokstav! Du har " + chanser + " chanser kvar!");
+			
+
+			
+			if(gissning = en bokstav i ordet) {
+				chanser++
+				
+			}
+			
+		}
+		
 	}
 
 }
