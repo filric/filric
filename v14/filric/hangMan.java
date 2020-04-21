@@ -18,6 +18,7 @@ public class hangMan {
 		System.out.println("Eftersom längre ord är lättare att gissa en bokstav rätt på så är 10-20 bokstäver ");
 		System.out.println("klassad som lätt. Detta betyder att ord med 1-9 bokstäver klassas som svårare.");
 		System.out.println("PS! Alla ord kommer vara på svenska!");
+		System.out.println();
 
 		String[] easy = new String[5];
 		easy[0] = "Nostalgisk";
@@ -35,19 +36,21 @@ public class hangMan {
 
 		int avsluta = 0;
 
+		String ordet = "";
+
 		do {
 			System.out.println("Vilken svårighetsgrad vill du spela på?");
 			System.out.println("Skriv 1 om du vill ha lätt");
 			System.out.println("Skriv 2 om du vill ha svårt");
 			int easyHard = input.nextInt();
 			if (easyHard == 1) {
-				
-
+				int position = (int) (Math.random() * easy.length);
+				ordet = easy[position];
 			}
 			if (easyHard == 2) {
-
+				int position = (int) (Math.random() * hard.length);
+				ordet = hard[position];
 			}
-			String ordet = "hej";
 
 			for (int chanser = 10; chanser > 0; chanser--) {// en loop som tar bort en chans varje gång du svarar fel
 				System.out.println("Gissa på en bokstav! Du har " + chanser + " chanser kvar!");
@@ -61,9 +64,13 @@ public class hangMan {
 				if (ordet.length() == 1) {
 
 					if (ordet.contains(gissning)) {
+						System.out.println("Bra gjort! Gissa igen!");
 						chanser++;
 
+					} else {
+						System.out.println("Ajajaj... Bokstaven fanns inte med");
 					}
+
 				}
 
 			}
@@ -71,7 +78,8 @@ public class hangMan {
 			System.out.println("Skriv 0 för att avsluta och 1 för att spela igen");
 			avsluta = input.nextInt();
 		} while (avsluta == 1);
-
+		System.out.println("Tack för att du spelade!");
+		input.close();
 	}
 
 }
