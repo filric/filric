@@ -17,58 +17,98 @@ public class hangMan {
 		System.out.println("Du väljer en svårighetsgrad beroende på hur långa ord du vill gissa på");
 		System.out.println("Eftersom längre ord är lättare att gissa en bokstav rätt på så är 10-20 bokstäver ");
 		System.out.println("klassad som lätt. Detta betyder att ord med 1-9 bokstäver klassas som svårare.");
-		System.out.println("PS! Alla ord kommer vara på svenska!");
+		System.out.println("PS! Alla ord kommer vara på svenska och med små bokstäver!");
 		System.out.println();
 
 		String[] easy = new String[5];
-		easy[0] = "Nostalgisk";
-		easy[1] = "Bronkopneumoni";// Orsakad av virus, bakterier eller luftvägsinfektion
-		easy[2] = "Jobbskatteavdrag";
-		easy[3] = "Peritonsillit"; // Även kallad halsböld
-		easy[4] = "Mycoplasmapneumoni";// Orsakas av en bakterie som inte har en cellvägg
+		easy[0] = "nostalgisk";
+		easy[1] = "bronkopneumoni";// Orsakad av virus, bakterier eller luftvägsinfektion
+		easy[2] = "jobbskatteavdrag";
+		easy[3] = "peritonsillit"; // Även kallad halsböld
+		easy[4] = "mycoplasmapneumoni";// Orsakas av en bakterie som inte har en cellvägg
 
 		String[] hard = new String[5];
-		easy[0] = "Afasi"; // Afasi innebär att ha språkliga svårigheter efter en hjärnskada
-		easy[1] = "Miserabel";
-		easy[2] = "Sarv";// En fisk
-		easy[3] = "Autism";
-		easy[4] = "Id";// Också en fisk
+		hard[0] = "afasi"; // Afasi innebär att ha språkliga svårigheter efter en hjärnskada
+		hard[1] = "miserabel";
+		hard[2] = "sarv";// En fisk
+		hard[3] = "autism";
+		hard[4] = "id";// Också en fisk
 
 		int avsluta = 0;
-
+		int position = 0;
 		String ordet = "";
+		char[] aktuellStatus;
+		// deklarerar och initzierar variabler
 
 		do {
 			System.out.println("Vilken svårighetsgrad vill du spela på?");
 			System.out.println("Skriv 1 om du vill ha lätt");
 			System.out.println("Skriv 2 om du vill ha svårt");
 			int easyHard = input.nextInt();
+			input.nextLine();
 			if (easyHard == 1) {
-				int position = (int) (Math.random() * easy.length);
+				position = (int) (Math.random() * easy.length);
 				ordet = easy[position];
 			}
 			if (easyHard == 2) {
-				int position = (int) (Math.random() * hard.length);
+				position = (int) (Math.random() * hard.length);
 				ordet = hard[position];
 			}
 
+			aktuellStatus = new char[ordet.length()];
+			for (int i = 0; i < aktuellStatus.length; i++) {// tilldelar alla tecken i aktuellStatusssträngen en _
+				aktuellStatus[i] = '_';
+			}
 			for (int chanser = 10; chanser > 0; chanser--) {// en loop som tar bort en chans varje gång du svarar fel
+
+				System.out.println("Här ser du ordet du ska gissa på: ");
+
+				for (int i = 0; i < aktuellStatus.length; i++) {
+					System.out.print(aktuellStatus[i]);
+				}
+				System.out.println();
 				System.out.println("Gissa på en bokstav! Du har " + chanser + " chanser kvar!");
 				String gissning = input.nextLine();
+				
 
-				if (ordet.length() != 1) {
+				if (gissning.length() != 1) {
 					System.out.println("Skriv en bokstav i taget tack");
 					chanser++;
 				}
 
-				if (ordet.length() == 1) {
+				if (gissning.length() == 1) {
 
 					if (ordet.contains(gissning)) {
-						System.out.println("Bra gjort! Gissa igen!");
+
 						chanser++;
+						if (ordet.contains(gissning)) {
+
+							int index = ordet.indexOf(gissning);// tar reda på vilken plats tecknet finns på
+
+							while (index >= 0) {// medans index är större eller lika med 0 ska aktuellStatus fyllas med
+												// den gissade bokstaven
+								aktuellStatus[index] = gissning.charAt(0);
+								index = ordet.indexOf(gissning, index + 1);
+							}
+							if (ordet.contentEquals(new String(aktuellStatus))) {// kollar om aktuellStatus är samma som
+																					// ordet
+								System.out.println("GRATTIS DU HAR LYCKATS");
+								System.out.println("Ordet var " + ordet);
+								chanser = 0;
+							} else {
+								System.out.println("Bra gjort! Gissa igen!");
+							}
+
+						}
 
 					} else {
 						System.out.println("Ajajaj... Bokstaven fanns inte med");
+						if (chanser == 1) {// om det var sista chansen och du svarade fel skriver den ut att gubben är
+											// hängd
+							System.out.println();
+							System.out.println("Gubben är hängd");
+							System.out.println();
+						}
 					}
 
 				}
